@@ -18,16 +18,15 @@ setup(
     packages=['jsoneditor'],
     package_data={
         'jsoneditor': [
-            '*.css',
-            '*.js',
-            '*.map',
-            '*.svg',
-            '*.html',
+            'static/jsoneditor/*.css',
+            'static/jsoneditor/*.js',
+            'static/jsoneditor/*.map',
+            'static/jsoneditor/*.svg',
+            'templates/jsoneditor/*.html',
         ],
     },
 
     description='Django form widget form JSONField',
     long_description=long_description,
     long_description_content_type="text/markdown",
-    include_package_data=True,
 )
