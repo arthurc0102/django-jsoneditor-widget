@@ -6,7 +6,7 @@
 
 It look like this.
 
-![demo image](./screenshot/demo.png)
+![demo image](https://github.com/arthurc0102/django-jsoneditor-widget/blob/master/screenshot/demo.png?raw=true)
 
 ## Install
 
