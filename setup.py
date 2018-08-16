@@ -3,7 +3,7 @@ import jsoneditor
 from setuptools import setup
 
 
-with open('README.md') as f:
+with open('README.md', 'r') as f:
     long_description = f.read()
 
 setup(
@@ -18,5 +18,6 @@ setup(
     packages=['jsoneditor'],
     description='Django form widget form JSONField',
     long_description=long_description,
+    long_description_content_type="text/markdown",
     include_package_data=True,
 )
