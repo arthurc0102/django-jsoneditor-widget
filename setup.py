@@ -21,7 +21,7 @@ setup(
             'static/jsoneditor/*.css',
             'static/jsoneditor/*.js',
             'static/jsoneditor/*.map',
-            'static/jsoneditor/*.svg',
+            'static/jsoneditor/img/*.svg',
             'templates/jsoneditor/*.html',
         ],
     },
@@ -29,4 +29,5 @@ setup(
     description='Django form widget form JSONField',
     long_description=long_description,
     long_description_content_type="text/markdown",
+    include_package_data=True,
 )
