@@ -15,7 +15,7 @@ It look like this.
     ```python
     INSTALLED_APPS = [
         # some apps ....
-        jsoneditor,
+        'jsoneditor',
         # other apps ...
     ]
     ```
