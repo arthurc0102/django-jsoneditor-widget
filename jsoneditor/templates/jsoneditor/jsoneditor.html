@@ -1,0 +1,19 @@
+<div id='{{ widget.name }}_editor_holder'></div>
+
+<textarea hidden readonly name="{{ widget.name }}"{% include "django/forms/widgets/attrs.html" %}>
+  {% if widget.value %}{{ widget.value }}{% endif %}
+</textarea>
+
+<script type="text/javascript">
+    var element = document.getElementById('{{ widget.name }}_editor_holder');
+    var jsonValue = JSON.parse(document.getElementById('id_{{ widget.name }}').innerText);
+    var jsonEditor = new JSONEditor(element, {
+        onChange: function() {
+            var textarea = document.getElementById('id_{{ widget.name }}');
+            textarea.value = JSON.stringify(jsonEditor.get()['Object']);
+        }
+    });
+
+    jsonEditor.set({"Object": jsonValue});
+    jsonEditor.expandAll();
+</script>
