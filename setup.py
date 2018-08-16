@@ -16,6 +16,16 @@ setup(
     url='https://github.com/arthurc0102/django-jsoneditor-widget',
 
     packages=['jsoneditor'],
+    package_data={
+        'jsoneditor': [
+            '*.css',
+            '*.js',
+            '*.map',
+            '*.svg',
+            '*.html',
+        ],
+    },
+
     description='Django form widget form JSONField',
     long_description=long_description,
     long_description_content_type="text/markdown",
