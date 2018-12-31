@@ -12,5 +12,5 @@ class JSONEditor(Textarea):
         }
 
         js = (
-            'jsoneditor/jsoneditor-minimalist.min.js',
+            'jsoneditor/jsoneditor.min.js',
         )
