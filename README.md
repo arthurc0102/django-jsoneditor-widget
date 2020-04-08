@@ -52,6 +52,10 @@ class Book(models.Model):
 - Use mixin
     ```python
     from django.contrib import admin
+    
+    from jsoneditor.admin import JSONFieldAdminMixin
+
+    from .models import Book
 
 
     @admin.register(Book)
