@@ -1,4 +1,4 @@
-<div id='{{ widget.name }}_json_editor'></div>
+<div id='{{ widget.name }}_json_editor' class='json_editor'></div>
 
 <textarea hidden readonly name="{{ widget.name }}" {% include 'django/forms/widgets/attrs.html' %}>
   {% if widget.value %}{{ widget.value }}{% endif %}
