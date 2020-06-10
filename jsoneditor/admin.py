@@ -3,15 +3,17 @@ from django.contrib.postgres.fields import JSONField
 
 from .forms import JSONEditor
 
-
 __all__ = [
-    'JSONFieldAdminMixin', 'JSONFieldModelAdmin'
+    'JSONFieldAdminMixin',
+    'JSONFieldModelAdmin',
 ]
 
 
 class JSONFieldAdminMixin:
     formfield_overrides = {
-        JSONField: {'widget': JSONEditor}
+        JSONField: {
+            'widget': JSONEditor,
+        },
     }
 
 
