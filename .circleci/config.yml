@@ -16,9 +16,9 @@ jobs:
             pip install twine flake8 flake8-commas
 
       - run:
-        name: Check lint
-        command: |
-          flake8
+          name: Check lint
+          command: |
+            flake8
 
       - run:
           name: Build wheel and Deploy
