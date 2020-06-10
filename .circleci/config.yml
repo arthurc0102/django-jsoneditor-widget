@@ -1,0 +1,39 @@
+version: 2
+
+jobs:
+  deploy:
+    docker:
+      - image: python:3.8
+
+    working_directory: ~/repo
+
+    steps:
+      - checkout
+
+      - run:
+          name: Install dependencies
+          command: |
+            pip install twine flake8 flake8-commas
+
+      - run:
+        name: Check lint
+        command: |
+          flake8
+
+      - run:
+          name: Build wheel and Deploy
+          command: |
+            python setup.py sdist bdist_wheel
+            python -m twine upload dist/*
+
+workflows:
+  version: 2
+
+  deploy:
+    jobs:
+      - deploy:
+          filters:
+            tags:
+              only: /.*/
+            branches:
+              ignore: /.*/
