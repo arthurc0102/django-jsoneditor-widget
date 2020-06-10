@@ -62,3 +62,27 @@ class Book(models.Model):
     class BookModelAdmin(JSONFieldAdminMixin, admin.ModelAdmin):
         pass
     ```
+
+- Use custom widget to specify jsoneditor options
+    ```python
+    from django.contrib import admin
+    from django.contrib.postgres.fields import JSONField
+
+    from jsoneditor.forms import JSONEditor
+
+    from .models import Book
+
+
+    class TextJSONEditor(JSONEditor):
+        jsoneditor_options = {
+            "mode": "text"
+        }
+
+
+    @admin.register(Book)
+    class BookModelAdmin(admin.ModelAdmin):
+        formfield_overrides = {
+            JSONField: {"widget": TextJSONEditor}
+        }
+
+    ```
